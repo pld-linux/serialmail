@@ -5,8 +5,6 @@ Version:	0.75
 Release:	1
 License:	GPL
 Group:		Networking/Daemons
-Group(de):	Netzwerkwesen/Server
-Group(pl):	Sieciowe/Serwery
 Source0:	http://cr.yp.to/software/%{name}-%{version}.tar.gz
 URL:		http://www.qmail.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
