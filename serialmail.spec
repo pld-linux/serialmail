@@ -8,7 +8,7 @@ Group(pl):	Seciowe/Serwery
 Copyright:	GPL
 URL:		http://www.qmail.org
 Source:		%{name}-%{version}.tar.gz
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	ucspi-tcp
 
 %description
