@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://cr.yp.to/software/%{name}-%{version}.tar.gz
+# Source0-md5:	e6a3049863ae8577b1780fcd9fbc98a9
 URL:		http://www.qmail.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	ucspi-tcp
