@@ -54,4 +54,3 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) /var/qmail/bin/*
 
 %doc {AUTOTURN,BLURB,CHANGES,README,THANKS,TODO,TOISP}.gz
-%changelog
