@@ -4,7 +4,7 @@ Name:		serialmail
 Version:	0.75
 Release:	1
 Group:		Networking/Daemons
-Group(pl):	Seciowe/Serwery
+Group(pl):	Sieciowe/Serwery
 Copyright:	GPL
 URL:		http://www.qmail.org
 Source:		%{name}-%{version}.tar.gz
