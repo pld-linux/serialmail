@@ -9,6 +9,7 @@ Copyright:   GPL
 URL:         http://www.qmail.org
 Source:      %{name}-%{version}.tar.gz
 BuildRoot:   /tmp/%{name}-%{version}-root
+Requires:    ucspi-tcp
 
 %description
 Qmail Mail Transfer Agent - Serial Mail Delivery Utilities
@@ -34,14 +35,9 @@ install maildirserial				$RPM_BUILD_ROOT/var/qmail/bin
 install serialqmtp				$RPM_BUILD_ROOT/var/qmail/bin
 install serialsmtp				$RPM_BUILD_ROOT/var/qmail/bin
 install setlock					$RPM_BUILD_ROOT/var/qmail/bin
-install maildirqmtp.1				$RPM_BUILD_ROOT%{_mandir}/man1
-install maildirsmtp.1				$RPM_BUILD_ROOT%{_mandir}/man1
-install maildirserial.1				$RPM_BUILD_ROOT%{_mandir}/man1
-install serialqmtp.1				$RPM_BUILD_ROOT%{_mandir}/man1
-install serialsmtp.1				$RPM_BUILD_ROOT%{_mandir}/man1
-install setlock.1				$RPM_BUILD_ROOT%{_mandir}/man1
+install *.1					$RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf {AUTOTURN,BLURB,CHANGES,README,THANKS,TODO,TOISP,$RPM_BUIL_ROOT%{_mandir}/man1/*.1}
+gzip -9nf {AUTOTURN,BLURB,CHANGES,README,THANKS,TODO,TOISP,$RPM_BUILD_ROOT%{_mandir}/man1/*.1}
 
 %post
 %preun
