@@ -22,7 +22,7 @@ echo %{__cc} %{rpmcflags} >conf-cc
 echo /usr >conf-home
 
 %build
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
