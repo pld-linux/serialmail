@@ -1,25 +1,26 @@
 Summary:	serialmail
-Summary(pl):	erialmail
+Summary(pl):	serialmail
 Name:		serialmail
 Version:	0.75
 Release:	1
 Group:		Networking/Daemons
+Group(de):	Netzwerkwesen/Server
 Group(pl):	Sieciowe/Serwery
-Copyright:	GPL
+License:	GPL
 URL:		http://www.qmail.org
-Source:		%{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	ucspi-tcp
 
 %description
-Qmail Mail Transfer Agent - Serial Mail Delivery Utilities
+Qmail Mail Transfer Agent - Serial Mail Delivery Utilities.
 
 %description -l pl
-Qmail Mail Transfer Agent - Narzêdzie do dostarczenia poczty
+Qmail Mail Transfer Agent - Narzêdzie do dostarczenia poczty.
 
 %prep
 %setup -q
-echo gcc $RPM_OPT_FLAGS >conf-cc
+echo %{__cc} %{rpmcflags} >conf-cc
 echo /usr >conf-home
 
 %build
@@ -38,7 +39,7 @@ install serialsmtp				$RPM_BUILD_ROOT%{_bindir}
 install setlock					$RPM_BUILD_ROOT%{_bindir}
 install *.1					$RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf {AUTOTURN,BLURB,CHANGES,README,THANKS,TODO,TOISP,$RPM_BUILD_ROOT%{_mandir}/man1/*.1}
+gzip -9nf AUTOTURN BLURB CHANGES README THANKS TODO TOISP
 
 %clean
 rm -rf $RPM_BUILD_ROOT
