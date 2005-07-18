@@ -7,6 +7,7 @@ License:	GPL
 Group:		Networking/Daemons
 Source0:	http://cr.yp.to/software/%{name}-%{version}.tar.gz
 # Source0-md5:	e6a3049863ae8577b1780fcd9fbc98a9
+Patch0:		serialmail-errno.patch
 URL:		http://www.qmail.org/
 Requires:	ucspi-tcp
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -19,6 +20,7 @@ Qmail Mail Transfer Agent - Narzêdzie do dostarczenia poczty.
 
 %prep
 %setup -q
+%patch0 -p1
 echo %{__cc} %{rpmcflags} >conf-cc
 echo /usr >conf-home
 

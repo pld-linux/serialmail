@@ -1,0 +1,35 @@
+diff -uNdr serialmail-0.75-old/error.3 serialmail-0.75/error.3
+--- serialmail-0.75-old/error.3	1998-11-15 03:28:23.000000000 +0100
++++ serialmail-0.75/error.3	2005-07-09 19:18:27.000000000 +0200
+@@ -4,8 +4,6 @@
+ .SH SYNTAX
+ .B #include <error.h>
+ 
+-extern int \fBerrno\fP;
+-
+ extern int \fBerror_intr\fP;
+ .br
+ extern int \fBerror_nomem\fP;
+diff -uNdr serialmail-0.75-old/error.h serialmail-0.75/error.h
+--- serialmail-0.75-old/error.h	1998-11-15 03:28:23.000000000 +0100
++++ serialmail-0.75/error.h	2005-07-09 19:18:47.000000000 +0200
+@@ -1,7 +1,7 @@
+ #ifndef ERROR_H
+ #define ERROR_H
+ 
+-extern int errno;
++#include <errno.h>
+ 
+ extern int error_intr;
+ extern int error_nomem;
+diff -uNdr serialmail-0.75-old/leapsecs_read.c serialmail-0.75/leapsecs_read.c
+--- serialmail-0.75-old/leapsecs_read.c	1998-11-15 03:28:23.000000000 +0100
++++ serialmail-0.75/leapsecs_read.c	2005-07-09 19:17:21.000000000 +0200
+@@ -2,7 +2,6 @@
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <errno.h>
+-extern int errno;
+ #include "tai.h"
+ #include "leapsecs.h"
+ 
