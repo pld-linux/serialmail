@@ -1,28 +1,34 @@
-Summary:	serialmail
-Summary(pl):	serialmail
+# TODO
+# - check license
+Summary:	Qmail Mail Transfer Agent - Serial Mail Delivery Utilities.
+Summary(pl):	Qmail Mail Transfer Agent - Narzêdzie do dostarczenia poczty.
 Name:		serialmail
 Version:	0.75
 Release:	1
+# is it really GPL?
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://cr.yp.to/software/%{name}-%{version}.tar.gz
 # Source0-md5:	e6a3049863ae8577b1780fcd9fbc98a9
 Patch0:		serialmail-errno.patch
-URL:		http://www.qmail.org/
+URL:		http://cr.yp.to/serialmail.html
 Requires:	ucspi-tcp
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Qmail Mail Transfer Agent - Serial Mail Delivery Utilities.
+serialmail is a collection of tools for passing mail across serial links. It
+works with qmail: you use qmail to deliver messages to a maildir, and then
+serialmail to deliver messages out of the maildir.
 
-%description -l pl
-Qmail Mail Transfer Agent - Narzêdzie do dostarczenia poczty.
+serialmail supports SMTP, including ESMTP PIPELINING, and QMTP.
+
+#description -l pl
 
 %prep
 %setup -q
 %patch0 -p1
-echo %{__cc} %{rpmcflags} >conf-cc
-echo /usr >conf-home
+echo "%{__cc} %{rpmcflags}" > conf-cc
+echo "%{_prefix}" > conf-home
 
 %build
 %{__make}
