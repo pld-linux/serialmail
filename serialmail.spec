@@ -5,8 +5,7 @@ Summary(pl):	Qmail Mail Transfer Agent - Narzêdzie do dostarczenia poczty.
 Name:		serialmail
 Version:	0.75
 Release:	1
-# is it really GPL?
-License:	GPL
+License:	ASIS
 Group:		Networking/Daemons
 Source0:	http://cr.yp.to/software/%{name}-%{version}.tar.gz
 # Source0-md5:	e6a3049863ae8577b1780fcd9fbc98a9
