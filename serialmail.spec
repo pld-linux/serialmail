@@ -1,7 +1,7 @@
 # TODO
 # - check license
-Summary:	Qmail Mail Transfer Agent - Serial Mail Delivery Utilities.
-Summary(pl):	Qmail Mail Transfer Agent - Narzêdzie do dostarczenia poczty.
+Summary:	Qmail Mail Transfer Agent - Serial Mail Delivery Utilities
+Summary(pl):	Qmail Mail Transfer Agent - Narzêdzie do dostarczenia poczty
 Name:		serialmail
 Version:	0.75
 Release:	1
@@ -15,13 +15,17 @@ Requires:	ucspi-tcp
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-serialmail is a collection of tools for passing mail across serial links. It
-works with qmail: you use qmail to deliver messages to a maildir, and then
-serialmail to deliver messages out of the maildir.
+serialmail is a collection of tools for passing mail across serial
+links. It works with qmail: you use qmail to deliver messages to a
+maildir, and then serialmail to deliver messages out of the maildir.
 
 serialmail supports SMTP, including ESMTP PIPELINING, and QMTP.
 
-#description -l pl
+%description -l pl
+serialmail to zestaw narzêdzi do przekazywania poczty po ³±czach
+szeregowych. Dzia³a z qmailem - qmaila u¿ywa siê do dostarczania
+wiadomo¶ci do maildirów, a nastêpnie serialmaila do dostarczania
+wiadomo¶ci z maildirów.
 
 %prep
 %setup -q
