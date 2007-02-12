@@ -1,7 +1,7 @@
 # TODO
 # - check license
 Summary:	Qmail Mail Transfer Agent - Serial Mail Delivery Utilities
-Summary(pl.UTF-8):   Qmail Mail Transfer Agent - Narzędzie do dostarczenia poczty
+Summary(pl.UTF-8):	Qmail Mail Transfer Agent - Narzędzie do dostarczenia poczty
 Name:		serialmail
 Version:	0.75
 Release:	1
