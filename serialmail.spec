@@ -1,7 +1,7 @@
 # TODO
 # - check license
 Summary:	Qmail Mail Transfer Agent - Serial Mail Delivery Utilities
-Summary(pl):	Qmail Mail Transfer Agent - Narzêdzie do dostarczenia poczty
+Summary(pl.UTF-8):   Qmail Mail Transfer Agent - NarzÄ™dzie do dostarczenia poczty
 Name:		serialmail
 Version:	0.75
 Release:	1
@@ -21,11 +21,11 @@ maildir, and then serialmail to deliver messages out of the maildir.
 
 serialmail supports SMTP, including ESMTP PIPELINING, and QMTP.
 
-%description -l pl
-serialmail to zestaw narzêdzi do przekazywania poczty po ³±czach
-szeregowych. Dzia³a z qmailem - qmaila u¿ywa siê do dostarczania
-wiadomo¶ci do maildirów, a nastêpnie serialmaila do dostarczania
-wiadomo¶ci z maildirów.
+%description -l pl.UTF-8
+serialmail to zestaw narzÄ™dzi do przekazywania poczty po Å‚Ä…czach
+szeregowych. DziaÅ‚a z qmailem - qmaila uÅ¼ywa siÄ™ do dostarczania
+wiadomoÅ›ci do maildirÃ³w, a nastÄ™pnie serialmaila do dostarczania
+wiadomoÅ›ci z maildirÃ³w.
 
 %prep
 %setup -q
